@@ -15,6 +15,8 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "mobile-home": "url('/portfolio/home/background-image-mobile.png')",
+        "home": "url('/portfolio/home/background-home.webp')",
       },
       backgroundColor: {
         "bg-light-gray": "#B0B0B0",
@@ -35,6 +37,9 @@ const config: Config = {
         "green": "#2AAC51"
       }
     },
+    boxShadow: {
+      'button': '0 0 1.5rem rgba(0 0 0 / 0.1)'
+    }
   },
   plugins: [],
 };
