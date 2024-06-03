@@ -27,21 +27,31 @@ const SkillsPage = () => {
         /></h1>
         <div className="relative w-[min(64rem,90%)] mx-auto">
           <div className="absolute w-[17.5rem] lg:w-[25rem] aspect-square border left-2 md:left-auto rounded-full border-[#C663FF]">
-            <div className="absolute bg-[#141416] w-[20%] aspect-square rounded-full border-2 border-[#F96512] left-8 top-2">
+            <div className="group absolute bg-[#141416] w-[20%] aspect-square rounded-full border-2 border-[#F96512] left-8 top-2">
+              <div className="hidden absolute translate-x-[50%] px-3 py-1 right-1/2 -top-[80%] md:-top-[95%] lg:-top-[70%] group-hover:block bg-white before:content-[''] before:w-0 before:h-0 before:absolute before:border-l-8 before:border-r-8 before:border-t-8 before:border-b-8 before:-bottom-[40%] before:right-1/2 before:border-b-transparent before:border-r-transparent before:border-t-white before:border-l-transparent before:translate-x-[50%]">
+                <span className="relative text-black font-bold md:text-xl">HTML</span>
+              </div>
               <Image
                 className="w-3/5 absolute translate-x-[50%] p-1 translate-y-[50%] right-1/2 bottom-1/2"
                 src={HTML}
                 alt="HTML"
               />
             </div>
-            <div className="absolute bg-[#141416] w-[20%] aspect-square rounded-full border-2 border-[#FFF] right-8 top-2">
+            <div className="group absolute bg-[#141416] w-[20%] aspect-square rounded-full border-2 border-[#FFF] right-8 top-2">
+              <div className="hidden absolute translate-x-[50%] px-3 py-1 right-1/2 -top-[80%] md:-top-[95%] lg:-top-[70%] group-hover:block bg-white
+              before:content-[''] before:w-0 before:h-0 before:absolute before:border-l-8 before:border-r-8 before:border-t-8 before:border-b-8 before:-bottom-[40%] before:right-1/2 before:border-b-transparent before:border-r-transparent before:border-t-white before:border-l-transparent before:translate-x-[50%]">
+                <span className="relative text-black font-bold md:text-xl">Github</span>
+              </div>
               <Image
                 className="w-3/5 absolute translate-x-[50%] p-1 translate-y-[50%] right-1/2 bottom-1/2"
                 src={Github}
                 alt="Github"
               />
             </div>
-            <div className="absolute bg-[#141416] w-[20%] aspect-square rounded-full border-2 border-[#32B1C1] -left-[8.75%] translate-y-[50%] bottom-1/2">
+            <div className="group absolute bg-[#141416] w-[20%] aspect-square rounded-full border-2 border-[#32B1C1] -left-[8.75%] translate-y-[50%] bottom-1/2">
+              <div className="hidden absolute translate-x-[50%] px-3 py-1 right-1/2 -top-[80%] md:-top-[95%] lg:-top-[70%] group-hover:block bg-white before:content-[''] before:w-0 before:h-0 before:absolute before:border-l-8 before:border-r-8 before:border-t-8 before:border-b-8 before:-bottom-[40%] before:right-1/2 before:border-b-transparent before:border-r-transparent before:border-t-white before:border-l-transparent before:translate-x-[50%]">
+                <span className="relative text-black font-bold md:text-xl">Tailwind</span>
+              </div>
               <Image
                 className="w-3/4 absolute translate-x-[50%] p-1 translate-y-[50%] right-1/2 bottom-1/2"
                 src={Tailwind}
@@ -55,21 +65,30 @@ const SkillsPage = () => {
                 alt="visual estudio code"
               />
             </div>
-            <div className="absolute bg-[#141416] w-[20%] aspect-square rounded-full border-2 border-[#FFF] -right-[8.75%] translate-y-[50%] bottom-1/2">
+            <div className="group absolute bg-[#141416] w-[20%] aspect-square rounded-full border-2 border-[#FFF] -right-[8.75%] translate-y-[50%] bottom-1/2">
+              <div className="hidden absolute translate-x-[50%] px-3 py-1 right-1/2 -top-[80%] md:-top-[95%] lg:-top-[70%] group-hover:block bg-white before:content-[''] before:w-0 before:h-0 before:absolute before:border-l-8 before:border-r-8 before:border-t-8 before:border-b-8 before:-bottom-[40%] before:right-1/2 before:border-b-transparent before:border-r-transparent before:border-t-white before:border-l-transparent before:translate-x-[50%]">
+                <span className="relative text-black font-bold md:text-xl">NextJS</span>
+              </div>
               <Image
                 className="w-[90%] absolute translate-x-[50%] p-1 translate-y-[50%] right-1/2 bottom-1/2"
                 src={NextJS}
                 alt="NextJS"
               />
             </div>
-            <div className="absolute bg-[#141416] w-[20%] aspect-square rounded-full border-2 border-[#0978FA] left-8 bottom-2">
+            <div className="group absolute bg-[#141416] w-[20%] aspect-square rounded-full border-2 border-[#0978FA] left-8 bottom-2">
+              <div className="hidden absolute translate-x-[50%] px-3 py-1 right-1/2 -top-[80%] md:-top-[95%] lg:-top-[70%] group-hover:block bg-white before:content-[''] before:w-0 before:h-0 before:absolute before:border-l-8 before:border-r-8 before:border-t-8 before:border-b-8 before:-bottom-[40%] before:right-1/2 before:border-b-transparent before:border-r-transparent before:border-t-white before:border-l-transparent before:translate-x-[50%]">
+                <span className="relative text-black font-bold md:text-xl">CSS</span>
+              </div>
               <Image
                 className="w-3/5 absolute translate-x-[50%] p-1 translate-y-[50%] right-1/2 bottom-1/2"
                 src={CSS}
                 alt="CSS"
               />
             </div>
-            <div className="absolute bg-[#141416] w-[20%] aspect-square rounded-full border-2 border-[#D4A107] right-8 bottom-2">
+            <div className="group absolute bg-[#141416] w-[20%] aspect-square rounded-full border-2 border-[#D4A107] right-8 bottom-2">
+              <div className="hidden absolute translate-x-[50%] px-3 py-1 right-1/2 -top-[80%] md:-top-[95%] lg:-top-[70%] group-hover:block bg-white before:content-[''] before:w-0 before:h-0 before:absolute before:border-l-8 before:border-r-8 before:border-t-8 before:border-b-8 before:-bottom-[40%] before:right-1/2 before:border-b-transparent before:border-r-transparent before:border-t-white before:border-l-transparent before:translate-x-[50%]">
+                <span className="relative text-black font-bold md:text-xl">Javascript</span>
+              </div>
               <Image
                 className="w-3/5 absolute translate-x-[50%] p-1 translate-y-[50%] right-1/2 bottom-1/2"
                 src={Javascript}
@@ -78,14 +97,20 @@ const SkillsPage = () => {
             </div>
           </div>
           <div className="absolute w-[12.5rem] lg:w-[17.5rem] rounded-full aspect-square border border-[#01CC67] right-3 md:right-0 translate-y-[150%] md:translate-y-0">
-            <div className="absolute bg-[#141416] w-[25%] aspect-square rounded-full border-2 border-[#FFF] translate-x-[50%] right-1/2 -top-[12.5%]">
+            <div className="group absolute bg-[#141416] w-[25%] aspect-square rounded-full border-2 border-[#FFF] translate-x-[50%] right-1/2 -top-[12.5%]">
+              <div className="hidden absolute translate-x-[50%] px-3 py-1 right-1/2 -top-[90%] lg:-top-[70%] group-hover:block bg-white before:content-[''] before:w-0 before:h-0 before:absolute before:border-l-4 before:border-r-4 before:border-t-4 before:border-b-4 before:-bottom-[22%] before:right-1/2 before:border-b-transparent before:border-r-transparent before:border-t-white before:border-l-transparent before:translate-x-[50%]">
+                <span className="relative text-black font-bold lg:text-xl">Unsplash</span>
+              </div>
               <Image
                 className="w-2/4 absolute translate-x-[50%] p-1 translate-y-[50%] right-1/2 bottom-1/2"
                 src={Unsplash}
                 alt="Unsplash"
               />
             </div>
-            <div className="absolute bg-[#141416] w-[25%] aspect-square rounded-full border-2 border-[#336AE9] -left-[12%] translate-y-[50%] bottom-1/2">
+            <div className="group absolute bg-[#141416] w-[25%] aspect-square rounded-full border-2 border-[#336AE9] -left-[12%] translate-y-[50%] bottom-1/2">
+              <div className="hidden absolute translate-x-[50%] px-3 py-1 right-1/2 -top-[90%] lg:-top-[70%] group-hover:block bg-white before:content-[''] before:w-0 before:h-0 before:absolute before:border-l-4 before:border-r-4 before:border-t-4 before:border-b-4 before:-bottom-[21%] before:right-1/2 before:border-b-transparent before:border-r-transparent before:border-t-white before:border-l-transparent before:translate-x-[50%]">
+                <span className="relative text-black font-bold lg:text-xl">Freepik</span>
+              </div>
               <Image
                 className="w-2/4 absolute translate-x-[50%] p-1 translate-y-[50%] right-1/2 bottom-1/2"
                 src={Freepik}
@@ -99,14 +124,20 @@ const SkillsPage = () => {
                 alt="Figma"
               />
             </div>
-            <div className="absolute bg-[#141416] w-[25%] aspect-square rounded-full border-2 border-[#00D393] -right-[12%] translate-y-[50%] bottom-1/2">
+            <div className="group absolute bg-[#141416] w-[25%] aspect-square rounded-full border-2 border-[#00D393] -right-[12%] translate-y-[50%] bottom-1/2">
+              <div className="hidden absolute translate-x-[50%] px-3 py-1 right-1/2 -top-[90%] lg:-top-[70%] group-hover:block bg-white before:content-[''] before:w-0 before:h-0 before:absolute before:border-l-4 before:border-r-4 before:border-t-4 before:border-b-4 before:-bottom-[21%] before:right-1/2 before:border-b-transparent before:border-r-transparent before:border-t-white before:border-l-transparent before:translate-x-[50%]">
+                <span className="relative text-black font-bold lg:text-xl">Flaticon</span>
+              </div>
               <Image
                 className="w-2/3 absolute translate-x-[50%] p-1 translate-y-[50%] right-1/2 bottom-1/2"
                 src={Flaticon}
                 alt="Flaticon"
               />
             </div>
-            <div className="absolute bg-[#141416] w-[25%] aspect-square rounded-full border-2 border-[#336AE9] translate-x-[50%] right-1/2 -bottom-[12.5%]">
+            <div className="group absolute bg-[#141416] w-[25%] aspect-square rounded-full border-2 border-[#336AE9] translate-x-[50%] right-1/2 -bottom-[12.5%]">
+              <div className="hidden absolute translate-x-[50%] px-3 py-1 right-1/2 -top-[90%] lg:-top-[70%] group-hover:block bg-white before:content-[''] before:w-0 before:h-0 before:absolute before:border-l-4 before:border-r-4 before:border-t-4 before:border-b-4 before:-bottom-[22%] before:right-1/2 before:border-b-transparent before:border-r-transparent before:border-t-white before:border-l-transparent before:translate-x-[50%]">
+                <span className="relative text-black font-bold lg:text-xl">Photoshop</span>
+              </div>
               <Image
                 className="w-2/3 absolute translate-x-[50%] p-1 translate-y-[50%] right-1/2 bottom-1/2"
                 src={Photoshop}

@@ -11,7 +11,8 @@ import MaxAssistencia from "/public/portfolio/projetos/max-assistencia.webp"
 import GuiaSecreto from "/public/portfolio/projetos/guia-secreto.webp"
 import RealidadeVirtual from "/public/portfolio/projetos/realidade-virtual.webp"
 import MarcaPaginas from "/public/portfolio/projetos/marca-paginas.webp"
-import BancoDeTerrenos from "/public/portfolio/projetos/banco-de-terrenos.webp"
+import Arrow from "/public/portfolio/projetos/arrow.svg"
+import Link from "next/link"
 
 const TWEEN_FACTOR_BASE = 0.52
 
@@ -22,34 +23,34 @@ type SlideData = {
   url: StaticImageData;
   title: string;
   desc: string;
+  link: string;
 }
 
 const slidesData: SlideData[] = [
   {
     url: GuiaSecreto,
     title: 'Guia Secreto - Landing Page',
-    desc: 'Landing page sobre o Guia Secreto de como ganhar dinheiro pelo OnlyFans.'
+    desc: 'Landing page sobre o Guia Secreto de como ganhar dinheiro pelo OnlyFans.',
+    link: 'https://www.guiasecreto.com/'
   },
   {
     url: RealidadeVirtual,
     title: 'Realidade Virtual - Landing Page',
-    desc: 'Landing Page para um estúdio produtor de óculos de realidade virtual. Projeto desenvolvido para fins de estudo.'
+    desc: 'Landing Page para um estúdio produtor de óculos de realidade virtual. Projeto desenvolvido para fins de estudo.',
+    link: 'https://levy-jr.github.io/loopstudios-vr-landing-page/'
   },
   {
     url: MaxAssistencia,
     title: 'Max assistência - Landing Page',
-    desc: 'Projeto feito para divulgação de um curso para reparos em placas de vídeo.'
+    desc: 'Projeto feito para divulgação de um curso para reparos em placas de vídeo.',
+    link: 'https://levy-jr.github.io/MaxAssistencia-LP/'
   },
   {
     url: MarcaPaginas,
     title: 'Marca Páginas - Landing Page',
-    desc: 'Landing page para uma extensão marcadora de páginas, com manipulação de painel de guia, accordion e validação de formulário. Projeto desenvolvido para fins de estudos.'
-  },
-  {
-    url: BancoDeTerrenos,
-    title: 'Banco de Terrenos - Landing Page',
-    desc: 'Landing Page feita para franquiados '
-  },
+    desc: 'Landing page para uma extensão marcadora de páginas, com manipulação de painel de guia, accordion e validação de formulário. Projeto desenvolvido para fins de estudos.',
+    link: 'https://levy-jr.github.io/Book-Mark-Landing-Page/'
+  }
 ]
 
 export const CarouselSlide = () => {
@@ -133,16 +134,31 @@ export const CarouselSlide = () => {
           {slidesData.map((info, index) => (
             <div className="embla__slide" key={index}>
               <div className="embla__slide__number">
-                <div className="bg-gradient-to-t from-pink to-purple p-[1px]">
+                <div className="bg-gradient-to-t relative group from-pink to-purple p-[1px]
+                before:hover:content-[''] before:hover:absolute before:hover:inset-[1px] before:hover:bg-gradient-to-b before:hover:from-transparent before:hover:to-black
+                ">
+                  <span className="hidden text-xl font-bold group-hover:block absolute left-[5%] bottom-[10%]">
+                    {info.title}
+                  </span>
+                  <Link
+                    className="hidden text-xl font-bold group-hover:block absolute right-[5%] bottom-[10%]"
+                    href={info.link}
+                  >
+                    <Image
+                      src={Arrow}
+                      alt="Seta"
+                    />
+                  </Link>
                   <Image
-                    className=""
                     src={info.url}
                     alt={info.title}
                   />
                 </div>
               </div>
-              <h2 className="text-3xl font-medium my-4">{info.title}</h2>
-              <p className="text-[#c1c1c1]">{info.desc}</p>
+              <Link href={info.link}>
+                <h2 className="text-3xl font-medium my-4">{info.title}</h2>
+                <p className="text-[#c1c1c1]">{info.desc}</p>
+              </Link>
             </div>
           ))}
         </div>
