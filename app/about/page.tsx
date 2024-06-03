@@ -50,7 +50,7 @@ const AboutPage = () => {
             </div>
             <ul className="hidden md:flex mt-6 justify-center gap-x-6">
               <li>
-                <Link href="">
+                <Link href="https://www.instagram.com/levygdev/">
                   <Image
                     src={Instagram}
                     alt="Instagram"

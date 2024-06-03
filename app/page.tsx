@@ -25,7 +25,7 @@ const Home = () => {
               </Link>
               <Link
                 className="border-2 flex items-center gap-x-2 font-medium tracking-wide transition-all border-green shadow-button hover:shadow-green hover:bg-[#111E17] px-8 md:px-11 py-3 rounded-full"
-                href="">
+                href="https://wa.me/5592986001909">
                 Contato
                 <Image className="inline" src={Whatsapp} alt="seta" width={20} height={20} />
               </Link>
