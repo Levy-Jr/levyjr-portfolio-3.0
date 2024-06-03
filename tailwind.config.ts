@@ -15,8 +15,9 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "mobile-home": "url('/portfolio/home/background-image-mobile.png')",
-        "home": "url('/portfolio/home/background-home.webp')",
+        "mobile-home": "url('/portfolio/home/background-image-mobile.png'), url('/portfolio/home/blur.webp')",
+        "home": "url('/portfolio/home/background-home.webp'), url('/portfolio/home/blur.webp')",
+        "projects": "url('/portfolio/projetos/background.svg'), url('/portfolio/projetos/waves.svg'), url('/portfolio/projetos/blur-projects.svg')",
       },
       backgroundColor: {
         "bg-light-gray": "#B0B0B0",
@@ -38,7 +39,8 @@ const config: Config = {
       }
     },
     boxShadow: {
-      'button': '0 0 1.5rem rgba(0 0 0 / 0.1)'
+      'button': '0 0 1.5rem rgba(0 0 0 / 0.1)',
+      'skill': '0 0 5rem .1rem rgba(0 0 0 / 0.1)',
     }
   },
   plugins: [],

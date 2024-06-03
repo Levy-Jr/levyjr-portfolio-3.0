@@ -2,6 +2,8 @@
 
 import { cn } from "@/lib/utils"
 import Image from "next/image"
+import Logo from "/public/portfolio/logo.svg"
+import Menu from "/public/portfolio/menu.svg"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
@@ -36,10 +38,10 @@ export const Navbar = () => {
   ]
 
   return (
-    <nav className="flex justify-between md:justify-normal items-center container mx-auto px-4 md:px-0 py-4">
+    <nav className="flex justify-between md:justify-normal items-center container mx-auto px-4 md:px-0 pt-4">
       <div className="relative aspect-square w-20">
         <Image
-          src="portfolio/logo.svg"
+          src={Logo}
           alt="home"
           fill
         />
@@ -48,18 +50,22 @@ export const Navbar = () => {
         onClick={toggleMenu}
         className={cn("md:hidden", isOpen ? "relative z-50" : "")}
       >
-        <Image src="portfolio/menu.svg" alt="" width={40} height={40} />
+        <Image
+          src={Menu}
+          alt=""
+          width={40}
+          height={40}
+        />
       </button>
       <ul className={cn("md:flex flex-1 justify-center gap-x-10", isOpen ? "fixed z-40 backdrop-blur-lg inset-0 flex flex-col items-center gap-4" : "hidden")}>
         {routes.map(route => (
           <li
-            key={route.href}
-            className={cn(
-              "text-lg font-medium",
-              route.active ? "text-pink" : "text-white hover:text-zinc-300"
-            )}
-          >
+            key={route.href}>
             <Link
+              className={cn(
+                "text-lg font-medium",
+                route.active ? "text-pink" : "text-white hover:text-zinc-300"
+              )}
               href={route.href}
             >
               {route.label}
