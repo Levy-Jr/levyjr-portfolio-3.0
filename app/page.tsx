@@ -18,13 +18,13 @@ const Home = () => {
             <p className="text-[#C1C1C1] md:text-2xl my-6">Se você deseja aproveitar ao máximo as vantagens que a presença online pode oferecer, estou aqui para ajudar a transformar essa visão em realidade.</p>
             <div className="flex justify-center md:justify-normal gap-3 text-xl">
               <Link
-                className="border-2 flex items-center gap-x-2 font-medium tracking-wide transition-all border-purple shadow-button hover:shadow-purple hover:bg-[#1F1E34] px-8 md:px-11 py-3 rounded-full"
+                className="border-2 flex items-center gap-x-2 font-medium tracking-wide transition-all border-purple shadow-button hover:shadow-purple hover:bg-[#1F1E34] px-8 md:px-11 py-3 rounded-full focus:bg-[#1F1E34]"
                 href="/projects">
                 Projetos
                 <Image className="inline" src={Arrow} alt="seta" width={18} height={18} />
               </Link>
               <Link
-                className="border-2 flex items-center gap-x-2 font-medium tracking-wide transition-all border-green shadow-button hover:shadow-green hover:bg-[#111E17] px-8 md:px-11 py-3 rounded-full"
+                className="border-2 flex items-center gap-x-2 font-medium tracking-wide transition-all border-green shadow-button hover:shadow-green hover:bg-[#111E17] px-8 md:px-11 py-3 rounded-full focus:bg-[#111E17]"
                 href="https://wa.me/5592986001909">
                 Contato
                 <Image className="inline" src={Whatsapp} alt="seta" width={20} height={20} />
