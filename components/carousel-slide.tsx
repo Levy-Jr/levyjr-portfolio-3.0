@@ -125,7 +125,7 @@ export const CarouselSlide = () => {
       .on('reInit', tweenScale)
       .on('scroll', tweenScale)
       .on('slideFocus', tweenScale)
-  }, [emblaApi, tweenScale, tweenFactor, tweenNodes])
+  }, [emblaApi, tweenScale, tweenFactor, tweenNodes, setTweenNodes, setTweenFactor])
 
   return (
     <div className="embla">
