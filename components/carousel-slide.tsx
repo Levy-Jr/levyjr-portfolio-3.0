@@ -11,6 +11,7 @@ import MaxAssistencia from "/public/portfolio/projetos/max-assistencia.webp"
 import GuiaSecreto from "/public/portfolio/projetos/guia-secreto.webp"
 import RealidadeVirtual from "/public/portfolio/projetos/realidade-virtual.webp"
 import MarcaPaginas from "/public/portfolio/projetos/marca-paginas.webp"
+import ECommerce from "/public/portfolio/projetos/e-commerce.webp"
 import Arrow from "/public/portfolio/projetos/arrow.svg"
 import Link from "next/link"
 
@@ -50,6 +51,12 @@ const slidesData: SlideData[] = [
     title: 'Marca Páginas - Landing Page',
     desc: 'Landing page para uma extensão marcadora de páginas, com manipulação de painel de guia, accordion e validação de formulário. Projeto desenvolvido para fins de estudos.',
     link: 'https://levy-jr.github.io/Book-Mark-Landing-Page/'
+  },
+  {
+    url: ECommerce,
+    title: 'E-Commerce de Periféricos - E-Commerce',
+    desc: 'E-Commerce de periféricos com painel de administrador e diversas funcionalidades. Projeto feito para fins de estudos.',
+    link: 'https://levy-jrs-e-commerce.vercel.app/'
   }
 ]
 
