@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Head from "next/head";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -16,9 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <meta name="google-site-verification" content="GAGdEvTt-eC51oiqkqLRCE6pVutnClRVYnI-pM47pRA" />
-      </head>
+      </Head>
       <body
         className={`${inter.className}`}>
         {children}
