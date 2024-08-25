@@ -1,0 +1,45 @@
+{
+  "Home": {
+    "title": "It's not just a website, ",
+    "gradient-title": "it's an experience!",
+    "desc": "If you want to make the most of the benefits that an online presence can offer, I'm here to help turn that vision into reality.",
+    "projects-btn": "Projects",
+    "contact-btn": "Contact",
+    "projects-made": "+40 projects already done"
+  },
+  "Nav": {
+    "home": "Home",
+    "about": "About",
+    "stack": "Stack",
+    "projects": "Projects"
+  },
+  "About": {
+    "desc": "Since 2021 I have been studying programming constantly. I've always been interested in IT and working with computers, so when I discovered web development I was hooked right away. For me, programming is like a super power, I think it's incredible that we can create projects from 0 to the end, that's why I love my work and I really enjoy studying about it. I can't imagine doing anything other than programming."
+  },
+  "Stack": {
+    "title": "My Stack"
+  },
+  "Projects": {
+    "title": "Projects",
+    "SecretGuide": {
+      "title": "Secret Guide - Landing Page",
+      "desc": "Landing page about the Secret Guide on how to make money through Onlyfans."
+    },
+    "VirtualReality": {
+      "title": "Virtual Reality - Landing Page",
+      "desc": "Landing page for a studio producing virtual reality glasses. Project developed for study purposes."
+    },
+    "MaxAssistance": {
+      "title": "Max Assistance - Landing Page",
+      "desc": "Project made to promote a course for video card repairs."
+    },
+    "BookMark": {
+      "title": "Book Mark - Landing Page",
+      "desc": "Landing page for a bookmark extension, with tab panel handling, accordion and form validation. Project developed for study purposes."
+    },
+    "Ecommerce": {
+      "title": "Peripherals E-Commerce",
+      "desc": "E-Commerce for peripherals with administrator panel and various features. Project made for study purposes."
+    }
+  }
+}

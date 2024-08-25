@@ -4,35 +4,40 @@ import { cn } from "@/lib/utils"
 import Image from "next/image"
 import Logo from "/public/portfolio/logo.svg"
 import Menu from "/public/portfolio/menu.svg"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { useState } from "react"
+import { Link, usePathname } from "@/navigation"
+import { useEffect, useState } from "react"
+import { useMessages } from "next-intl"
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
 
+  const messages = useMessages() as any
   const toggleMenu = () => setIsOpen(!isOpen)
+
+  useEffect(() => {
+    setIsOpen(false)
+  }, [pathname])
 
   const routes = [
     {
       href: "/",
-      label: "Home",
+      label: messages.Nav.home,
       active: pathname === '/'
     },
     {
       href: "/about",
-      label: "Sobre",
+      label: messages.Nav.about,
       active: pathname === '/about'
     },
     {
-      href: "/skills",
-      label: "Habilidades",
-      active: pathname === '/skills'
+      href: "/stack",
+      label: messages.Nav.stack,
+      active: pathname === '/stack'
     },
     {
       href: "/projects",
-      label: "Projetos",
+      label: messages.Nav.projects,
       active: pathname === '/projects'
     },
   ]

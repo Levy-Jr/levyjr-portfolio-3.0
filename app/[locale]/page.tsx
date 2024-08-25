@@ -1,32 +1,35 @@
-import { Navbar } from "@/components/navbar";
 import Image from "next/image";
 import Link from "next/link";
 import Whatsapp from "/public/portfolio/home/whatsapp.svg"
 import Arrow from "/public/portfolio/home/arrow.svg"
 import Octagon from "/public/portfolio/home/octagon-icon.png"
 import VerifyIcon from "/public/portfolio/home/verify-icon.svg"
+import { useTranslations } from "next-intl";
+import { NavbarProvider } from "@/context/NavbarContext";
 
 const Home = () => {
+  const t = useTranslations('Home')
+
   return (
     <div className="bg-mobile-home md:bg-home
     bg-no-repeat bg-[position:center,left] bg-[size:cover,auto] min-h-screen">
-      <Navbar />
+      <NavbarProvider />
       <main className="container px-4 md:px-0 md:py-0 mx-auto mt-8 md:mt-20">
         <div className="flex">
           <div className="md:w-[60%]">
-            <h1 className="text-4xl md:text-[4rem] leading-none font-bold">Não é só um site, é uma <span className="bg-gradient-to-r from-pink to-purple bg-clip-text text-transparent">experiência!</span></h1>
-            <p className="text-[#C1C1C1] md:text-2xl my-6">Se você deseja aproveitar ao máximo as vantagens que a presença online pode oferecer, estou aqui para ajudar a transformar essa visão em realidade.</p>
+            <h1 className="text-4xl md:text-[4rem] leading-none font-bold">{t('title')}<span className="bg-gradient-to-r from-pink to-purple bg-clip-text text-transparent">{t('gradient-title')}</span></h1>
+            <p className="text-[#C1C1C1] md:text-2xl my-6">{t('desc')}</p>
             <div className="flex justify-center md:justify-normal gap-3 text-lg md:text-xl">
               <Link
                 className="border-2 flex items-center gap-x-2 font-medium tracking-wide transition-all border-purple shadow-button hover:shadow-purple hover:bg-[#1F1E34] px-4 md:px-11 py-3 rounded-full focus:bg-[#1F1E34]"
                 href="/projects">
-                Projetos
+                {t('projects-btn')}
                 <Image className="inline" src={Arrow} alt="seta" width={18} height={18} />
               </Link>
               <Link
                 className="border-2 flex items-center gap-x-2 font-medium tracking-wide transition-all border-green shadow-button hover:shadow-green hover:bg-[#111E17] px-4 md:px-11 py-3 rounded-full focus:bg-[#111E17]"
                 href="https://wa.me/5592986001909">
-                Contato
+                {t('contact-btn')}
                 <Image className="inline" src={Whatsapp} alt="seta" width={20} height={20} />
               </Link>
             </div>
@@ -49,7 +52,7 @@ const Home = () => {
             />
           </div>
           <p className="text-sm md:text-2xl">
-            +40 projetos já feitos
+            {t('projects-made')}
           </p>
         </div>
       </main>

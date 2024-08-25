@@ -1,0 +1,45 @@
+{
+  "Home": {
+    "title": "Não é só um site, é uma ",
+    "gradient-title": "experiência!",
+    "desc": "Se você deseja aproveitar ao máximo as vantagens que a presença online pode oferecer, estou aqui para ajudar a transformar essa visão em realidade.",
+    "projects-btn": "Projetos",
+    "contact-btn": "Contato",
+    "projects-made": "+40 projetos já feitos"
+  },
+  "Nav": {
+    "home": "Home",
+    "about": "Sobre",
+    "stack": "Habilidades",
+    "projects": "Projetos"
+  },
+  "About": {
+    "desc": "Desde 2021 venho estudando programação constantemente. Sempre tive interesse em TI e em mexer em computadores, então quando conheci o desenvolvimento web já fiquei encantado logo de cara. Para mim, programar é como se fosse um super poder, acho incrível a capacidade de podermos criar projetos do 0 até o final, por isso amo meu trabalho e gosto bastante de estudar sobre isso. Não me imagino fazendo outra coisa além da programação."
+  },
+  "Stack": {
+    "title": "Habilidades"
+  },
+  "Projects": {
+    "title": "Projetos",
+    "SecretGuide": {
+      "title": "Guia Secreto - Landing Page",
+      "desc": "Landing page sobre o Guia Secreto de como ganhar dinheiro pelo OnlyFans."
+    },
+    "VirtualReality": {
+      "title": "Realidade Virtual - Landing Page",
+      "desc": "Landing Page para um estúdio produtor de óculos de realidade virtual. Projeto desenvolvido para fins de estudo."
+    },
+    "MaxAssistance": {
+      "title": "Max assistência - Landing Page",
+      "desc": "Projeto feito para divulgação de um curso para reparos em placas de vídeo."
+    },
+    "BookMark": {
+      "title": "Marca Páginas - Landing Page",
+      "desc": "Landing page para uma extensão marcadora de páginas, com manipulação de painel de guia, accordion e validação de formulário. Projeto desenvolvido para fins de estudos."
+    },
+    "Ecommerce": {
+      "title": "E-Commerce de Periféricos - E-Commerce",
+      "desc": "E-Commerce de periféricos com painel de administrador e diversas funcionalidades. Projeto feito para fins de estudos."
+    }
+  }
+}

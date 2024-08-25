@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/navbar"
 import { WhatsappButton } from "@/components/whatsapp-btn"
 import Image from "next/image"
 import AbilityIcon from "/public/portfolio/habilidades/ability-icon.svg"
@@ -14,13 +13,17 @@ import NextJS from "/public/portfolio/habilidades/nextjs.svg"
 import Photoshop from "/public/portfolio/habilidades/photoshop.svg"
 import Tailwind from "/public/portfolio/habilidades/tailwind.svg"
 import Unsplash from "/public/portfolio/habilidades/unsplash.svg"
+import { useTranslations } from "next-intl"
+import { NavbarProvider } from "@/context/NavbarContext"
 
 const SkillsPage = () => {
+  const t = useTranslations("Stack")
+
   return (
     <div>
-      <Navbar />
+      <NavbarProvider />
       <main className="container mx-auto">
-        <h1 className="text-4xl md:text-6xl my-16 px-4 md:px-0 font-bold">Habilidades <Image
+        <h1 className="text-4xl md:text-6xl my-16 px-4 md:px-0 font-bold">{t("title")} <Image
           className="inline ml-2"
           src={AbilityIcon}
           alt="Ícone de habilidade"

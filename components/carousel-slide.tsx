@@ -14,11 +14,11 @@ import MarcaPaginas from "/public/portfolio/projetos/marca-paginas.webp"
 import ECommerce from "/public/portfolio/projetos/e-commerce.webp"
 import Arrow from "/public/portfolio/projetos/arrow.svg"
 import Link from "next/link"
+import { useMessages } from "next-intl"
 
 const TWEEN_FACTOR_BASE = 0.52
 
-const numberWithinRange = (number: number, min: number, max: number): number =>
-  Math.min(Math.max(number, min), max)
+const numberWithinRange = (number: number, min: number, max: number): number => Math.min(Math.max(number, min), max)
 
 type SlideData = {
   url: StaticImageData;
@@ -27,40 +27,41 @@ type SlideData = {
   link: string;
 }
 
-const slidesData: SlideData[] = [
-  {
-    url: GuiaSecreto,
-    title: 'Guia Secreto - Landing Page',
-    desc: 'Landing page sobre o Guia Secreto de como ganhar dinheiro pelo OnlyFans.',
-    link: 'https://www.guiasecreto.com/'
-  },
-  {
-    url: RealidadeVirtual,
-    title: 'Realidade Virtual - Landing Page',
-    desc: 'Landing Page para um estúdio produtor de óculos de realidade virtual. Projeto desenvolvido para fins de estudo.',
-    link: 'https://levy-jr.github.io/loopstudios-vr-landing-page/'
-  },
-  {
-    url: MaxAssistencia,
-    title: 'Max assistência - Landing Page',
-    desc: 'Projeto feito para divulgação de um curso para reparos em placas de vídeo.',
-    link: 'https://levy-jr.github.io/MaxAssistencia-LP/'
-  },
-  {
-    url: MarcaPaginas,
-    title: 'Marca Páginas - Landing Page',
-    desc: 'Landing page para uma extensão marcadora de páginas, com manipulação de painel de guia, accordion e validação de formulário. Projeto desenvolvido para fins de estudos.',
-    link: 'https://levy-jr.github.io/Book-Mark-Landing-Page/'
-  },
-  {
-    url: ECommerce,
-    title: 'E-Commerce de Periféricos - E-Commerce',
-    desc: 'E-Commerce de periféricos com painel de administrador e diversas funcionalidades. Projeto feito para fins de estudos.',
-    link: 'https://levy-jrs-e-commerce.vercel.app/'
-  }
-]
-
 export const CarouselSlide = () => {
+  const messages = useMessages() as any
+
+  const slidesData: SlideData[] = [
+    {
+      url: GuiaSecreto,
+      title: messages.Projects.SecretGuide.title,
+      desc: messages.Projects.SecretGuide.desc,
+      link: 'https://www.guiasecreto.com/'
+    },
+    {
+      url: RealidadeVirtual,
+      title: messages.Projects.VirtualReality.title,
+      desc: messages.Projects.VirtualReality.desc,
+      link: 'https://levy-jr.github.io/loopstudios-vr-landing-page/'
+    },
+    {
+      url: MaxAssistencia,
+      title: messages.Projects.MaxAssistance.title,
+      desc: messages.Projects.MaxAssistance.title,
+      link: 'https://levy-jr.github.io/MaxAssistencia-LP/'
+    },
+    {
+      url: MarcaPaginas,
+      title: messages.Projects.BookMark.title,
+      desc: messages.Projects.BookMark.desc,
+      link: 'https://levy-jr.github.io/Book-Mark-Landing-Page/'
+    },
+    {
+      url: ECommerce,
+      title: messages.Projects.Ecommerce.title,
+      desc: messages.Projects.Ecommerce.desc,
+      link: 'https://levy-jrs-e-commerce.vercel.app/'
+    }
+  ]
   const tweenFactor = useRef(0)
   const tweenNodes = useRef<HTMLElement[]>([])
 

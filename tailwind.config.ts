@@ -15,7 +15,7 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "mobile-home": "url('/portfolio/home/background-image-mobile.png'), url('/portfolio/home/blur.webp')",
+        "mobile-home": "url('/portfolio/home/background-image-mobile.webp'), url('/portfolio/home/blur.webp')",
         "home": "url('/portfolio/home/background-home.webp'), url('/portfolio/home/blur.webp')",
         "projects": "url('/portfolio/projetos/background.svg'), url('/portfolio/projetos/waves.svg'), url('/portfolio/projetos/blur-projects.svg')",
       },
