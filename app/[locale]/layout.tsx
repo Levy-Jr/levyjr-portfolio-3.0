@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import { locales } from "@/config";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 export function generateStaticParams() {
   return locales.map(locale => { locale })
@@ -29,6 +30,7 @@ export default function RootLayout({
   children,
   params: { locale }
 }: Readonly<RootLayoutProps>) {
+  unstable_setRequestLocale(locale)
 
   return (
     <html lang={locale}>
