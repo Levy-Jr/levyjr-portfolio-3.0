@@ -8,14 +8,22 @@ import Instagram from "/public/portfolio/sobre/instagram-icon.svg"
 import Squares1 from "/public/portfolio/sobre/squares-1.svg"
 import Squares2 from "/public/portfolio/sobre/squares-2.svg"
 import { useTranslations } from "next-intl"
-import { NavbarProvider } from "@/context/NavbarContext"
+import { Navbar } from "@/components/navbar"
+import { unstable_setRequestLocale } from "next-intl/server"
 
-const AboutPage = () => {
+type ParamsProps = {
+  params: {
+    locale: string
+  }
+}
+
+const AboutPage = ({ params: { locale } }: ParamsProps) => {
+  unstable_setRequestLocale(locale);
   const t = useTranslations("About")
 
   return (
     <div className="overflow-x-hidden">
-      <NavbarProvider />
+      <Navbar />
       <main className="container mx-auto relative px-16 md:px-0 lg:px-2 pb-8 md:pb-24 mb-8 mt-10 md:mt-20">
         <div className="absolute left-3 md:left-8 h-3/4 md:h-full w-3/4 md:w-full translate-y-[50%] bottom-1/2 md:bottom-auto md:translate-x-0 md:translate-y-0 ">
           <Image

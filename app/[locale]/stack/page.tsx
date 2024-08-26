@@ -14,14 +14,22 @@ import Photoshop from "/public/portfolio/habilidades/photoshop.svg"
 import Tailwind from "/public/portfolio/habilidades/tailwind.svg"
 import Unsplash from "/public/portfolio/habilidades/unsplash.svg"
 import { useTranslations } from "next-intl"
-import { NavbarProvider } from "@/context/NavbarContext"
+import { Navbar } from "@/components/navbar"
+import { unstable_setRequestLocale } from "next-intl/server"
 
-const SkillsPage = () => {
+type ParamsProps = {
+  params: {
+    locale: string
+  }
+}
+
+const SkillsPage = ({ params: { locale } }: ParamsProps) => {
+  unstable_setRequestLocale(locale);
   const t = useTranslations("Stack")
 
   return (
     <div>
-      <NavbarProvider />
+      <Navbar />
       <main className="container mx-auto">
         <h1 className="text-4xl md:text-6xl my-16 px-4 md:px-0 font-bold">{t("title")} <Image
           className="inline ml-2"

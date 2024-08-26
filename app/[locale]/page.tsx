@@ -5,15 +5,23 @@ import Arrow from "/public/portfolio/home/arrow.svg"
 import Octagon from "/public/portfolio/home/octagon-icon.png"
 import VerifyIcon from "/public/portfolio/home/verify-icon.svg"
 import { useTranslations } from "next-intl";
-import { NavbarProvider } from "@/context/NavbarContext";
+import { Navbar } from "@/components/navbar";
+import { unstable_setRequestLocale } from "next-intl/server";
 
-const Home = () => {
+type ParamsProps = {
+  params: {
+    locale: string
+  }
+}
+
+const Home = ({ params: { locale } }: ParamsProps) => {
+  unstable_setRequestLocale(locale);
   const t = useTranslations('Home')
 
   return (
     <div className="bg-mobile-home md:bg-home
     bg-no-repeat bg-[position:center,left] bg-[size:cover,auto] min-h-screen">
-      <NavbarProvider />
+      <Navbar />
       <main className="container px-4 md:px-0 md:py-0 mx-auto mt-8 md:mt-20">
         <div className="flex">
           <div className="md:w-[60%]">

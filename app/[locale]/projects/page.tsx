@@ -4,14 +4,22 @@ import Maleta from "/public/portfolio/projetos/work-icon.svg"
 import Image from "next/image"
 import { TranslationProvider } from "@/context/TranslationContext"
 import { useTranslations } from "next-intl"
-import { NavbarProvider } from "@/context/NavbarContext"
+import { Navbar } from "@/components/navbar"
+import { unstable_setRequestLocale } from "next-intl/server"
 
-const ProjectsPage = () => {
+type ParamsProps = {
+  params: {
+    locale: string
+  }
+}
+
+const ProjectsPage = ({ params: { locale } }: ParamsProps) => {
+  unstable_setRequestLocale(locale);
   const t = useTranslations("Projects")
 
   return (
     <div className="bg-projects bg-no-repeat bg-[position:right_top,bottom_left,top_left] bg-auto pb-28 md:pb-8">
-      <NavbarProvider />
+      <Navbar />
       <main className="relative">
         <div className="container px-4 md:px-0 mx-auto">
           <h1 className="text-4xl md:text-6xl my-16 font-bold">{t("title")}

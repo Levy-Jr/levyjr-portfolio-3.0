@@ -3,7 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import { locales } from "@/config";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { getMessages, unstable_setRequestLocale } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
 
 export function generateStaticParams() {
   return locales.map(locale => ({ locale }))
@@ -26,17 +27,20 @@ interface RootLayoutProps {
   }
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params: { locale }
 }: Readonly<RootLayoutProps>) {
   unstable_setRequestLocale(locale)
+  const messages = await getMessages()
 
   return (
     <html lang={locale}>
       <body
         className={`${inter.className}`}>
-        {children}
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
         <Script
           id="facebook-pixel"
           strategy="afterInteractive"
