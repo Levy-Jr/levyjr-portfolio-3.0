@@ -6,7 +6,7 @@ import { locales } from "@/config";
 import { unstable_setRequestLocale } from "next-intl/server";
 
 export function generateStaticParams() {
-  return locales.map(locale => { locale })
+  return locales.map(locale => ({ locale }))
 }
 
 const inter = Inter({ subsets: ["latin"] });
