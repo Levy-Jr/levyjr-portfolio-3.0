@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import Whatsapp from "/public/portfolio/home/whatsapp.svg"
 import Arrow from "/public/portfolio/home/arrow.svg"
 import Octagon from "/public/portfolio/home/octagon-icon.png"
