@@ -31,9 +31,7 @@ const ProjectsPage = ({ params: { locale } }: ParamsProps) => {
               height={0}
             /></h1>
         </div>
-        <TranslationProvider>
-          <CarouselSlide />
-        </TranslationProvider>
+        <CarouselSlide />
         <WhatsappButton />
       </main>
     </div>

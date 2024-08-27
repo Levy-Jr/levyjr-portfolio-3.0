@@ -46,7 +46,7 @@ export const CarouselSlide = () => {
     {
       url: MaxAssistencia,
       title: messages.Projects.MaxAssistance.title,
-      desc: messages.Projects.MaxAssistance.title,
+      desc: messages.Projects.MaxAssistance.desc,
       link: 'https://levy-jr.github.io/MaxAssistencia-LP/'
     },
     {
