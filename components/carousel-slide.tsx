@@ -12,6 +12,7 @@ import GuiaSecreto from "/public/portfolio/projetos/guia-secreto.webp"
 import RealidadeVirtual from "/public/portfolio/projetos/realidade-virtual.webp"
 import MarcaPaginas from "/public/portfolio/projetos/marca-paginas.webp"
 import ECommerce from "/public/portfolio/projetos/e-commerce.webp"
+import AGM from "/public/portfolio/projetos/agm-home-first-section.webp"
 import Arrow from "/public/portfolio/projetos/arrow.svg"
 import Link from "next/link"
 import { useMessages } from "next-intl"
@@ -36,6 +37,12 @@ export const CarouselSlide = () => {
       title: messages.Projects.SecretGuide.title,
       desc: messages.Projects.SecretGuide.desc,
       link: 'https://www.guiasecreto.com/'
+    },
+    {
+      url: AGM,
+      title: messages.Projects.AGM.title,
+      desc: messages.Projects.AGM.desc,
+      link: 'https://www.agmautosales.com/',
     },
     {
       url: RealidadeVirtual,
@@ -151,6 +158,8 @@ export const CarouselSlide = () => {
                   <Link
                     className="hidden text-xl font-bold group-hover:block absolute right-[5%] bottom-[10%]"
                     href={info.link}
+                    target="_blank"
+                    referrerPolicy="no-referrer"
                   >
                     <Image
                       src={Arrow}
@@ -163,7 +172,11 @@ export const CarouselSlide = () => {
                   />
                 </div>
               </div>
-              <Link href={info.link}>
+              <Link
+                href={info.link}
+                target="_blank"
+                referrerPolicy="no-referrer"
+              >
                 <h2 className="text-3xl font-medium my-4">{info.title}</h2>
                 <p className="text-[#c1c1c1]">{info.desc}</p>
               </Link>

@@ -25,6 +25,10 @@
       "title": "Guia Secreto - Landing Page",
       "desc": "Landing page sobre o Guia Secreto de como ganhar dinheiro pelo OnlyFans."
     },
+    "AGM": {
+      "title": "AGM Auto Sales - Site Institucional",
+      "desc": "Site institucional para uma concessionária. Inicialmente foi criado usando Dealr Cloud, porém refiz o design e o frontend do site usando HTML, CSS & Javascript."
+    },
     "VirtualReality": {
       "title": "Realidade Virtual - Landing Page",
       "desc": "Landing Page para um estúdio produtor de óculos de realidade virtual. Projeto desenvolvido para fins de estudo."
